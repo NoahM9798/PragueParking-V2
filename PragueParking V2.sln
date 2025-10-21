@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PragueParking V2.0", "PragueParking V2.0\PragueParking V2.0.csproj", "{8B8E63B7-B2A0-46EC-BCAB-EF7C21C73ACA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigPragueParking", "ConfigPragueParking\ConfigPragueParking.csproj", "{74029CBB-6A7B-4AA8-8143-11425F023906}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B8E63B7-B2A0-46EC-BCAB-EF7C21C73ACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B8E63B7-B2A0-46EC-BCAB-EF7C21C73ACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B8E63B7-B2A0-46EC-BCAB-EF7C21C73ACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B8E63B7-B2A0-46EC-BCAB-EF7C21C73ACA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74029CBB-6A7B-4AA8-8143-11425F023906}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74029CBB-6A7B-4AA8-8143-11425F023906}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74029CBB-6A7B-4AA8-8143-11425F023906}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74029CBB-6A7B-4AA8-8143-11425F023906}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D3B450F9-F357-485C-893E-87C1A679C019}
+	EndGlobalSection
+EndGlobal

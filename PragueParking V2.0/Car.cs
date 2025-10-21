@@ -12,7 +12,7 @@ namespace PragueParking_V2._0
         //Constructor
         public Car(string RegNumber) : base(RegNumber)
         {
-            Size = 3;
+            Size = 4;
             PrizePerHour = 60; //TODO: Get from JSON
             VehicleType = "Car";
         }

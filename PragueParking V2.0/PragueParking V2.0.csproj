@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Figgle.Fonts" Version="0.6.5" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
     <PackageReference Include="Spectre.Console" Version="0.52.0" />
   </ItemGroup>
 

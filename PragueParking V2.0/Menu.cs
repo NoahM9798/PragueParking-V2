@@ -42,7 +42,7 @@ namespace PragueParking_V2._0
                        );
         }
 
-        public static void parkOptions()
+        public static void parkOptions(ParkingGarage garage)
         {
             var parkChoice = AnsiConsole.Prompt(
             new SelectionPrompt<string>()
@@ -59,16 +59,19 @@ namespace PragueParking_V2._0
                 case "Car":
                     string carReg = askRegNumber();
                     Car car = new Car(carReg);
+                    if (garage.ParkVehicle(car))
+                    {
+                        //Successfully parked
+                        AnsiConsole.MarkupLine("[green]Car parked successfully![/]\nPress any key to go back...");
+                        Console.ReadKey();
+                        break;
+                    }
+                    AnsiConsole.MarkupLine("[red]No available spot for the car![/]\nPress any key to go back...");
+                    Console.ReadKey();
                     break;
                 case "Motorcycle":
                     string mcReg = askRegNumber();
                     MC mc = new MC(mcReg);
-                    break;
-                case "Bicycle":
-                    string bikeReg = askRegNumber();
-                    break;
-                case "Bus":
-                    string busReg = askRegNumber();
                     break;
             }
         }

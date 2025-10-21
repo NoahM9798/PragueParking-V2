@@ -21,11 +21,8 @@ namespace ConfigPragueParking
                 //File does not exist, create default config
                 var defaultConfig = new GarageConfig
                 {
-                    CarSize = 3,
-                    MotorcycleSize = 2,
-                    BusSize = 5,
-                    bicycleSize = 1,
-                    GarageSize = 100
+                    SpotSize = 4,
+                    GarageSize = 100,
                 };
                 SaveConfig(defaultConfig);
                 return defaultConfig; 

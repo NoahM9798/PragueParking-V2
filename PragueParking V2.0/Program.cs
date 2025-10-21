@@ -1,7 +1,7 @@
 ﻿//Skriv ut menyn
 using PragueParking_V2._0;
 using Spectre.Console;
-
+ParkingGarage Garage = new ParkingGarage();
 
 while (!Menu.Exit)
 {    
@@ -9,7 +9,7 @@ while (!Menu.Exit)
     switch (Menu.Choice)
     {
         case "Park Vehicle":
-            Menu.parkOptions();
+            Menu.parkOptions(Garage);
             break;
         case "Retrieve Vehicle":
             break;

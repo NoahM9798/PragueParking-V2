@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Spectre.Console;
 using Figgle.Fonts;
+using System.Diagnostics.Metrics;
 namespace PragueParking_V2._0
 {
 
@@ -57,8 +58,15 @@ namespace PragueParking_V2._0
             switch (parkChoice)
             {
                 case "Car":
-                    string carReg = askRegNumber();
+                    string carReg = askRegNumber(garage);
                     Car car = new Car(carReg);
+                    if (garage.VehicleExists(car.RegNumber))
+                    {
+                        //Vehicle with the same registration number already exists
+                        AnsiConsole.MarkupLine("[red]A vehicle with the same registration number is already parked![/]\nPress any key to go back...");
+                        Console.ReadKey();
+                        break;
+                    }
                     if (garage.ParkVehicle(car))
                     {
                         //Successfully parked
@@ -70,13 +78,29 @@ namespace PragueParking_V2._0
                     Console.ReadKey();
                     break;
                 case "Motorcycle":
-                    string mcReg = askRegNumber();
+                    string mcReg = askRegNumber(garage);
                     MC mc = new MC(mcReg);
+                    if (garage.VehicleExists(mc.RegNumber))
+                    {
+                        //Vehicle with the same registration number already exists
+                        AnsiConsole.MarkupLine("[red]A vehicle with the same registration number is already parked![/]\nPress any key to go back...");
+                        Console.ReadKey();
+                        break;
+                    }
                     break;
+                case "Bicycle":
+                    AnsiConsole.MarkupLine("[yellow]Bicycle parking not implemented yet![/]\nPress any key to go back...");
+                    Console.ReadKey();
+                    break;
+                case "Bus":
+                    AnsiConsole.MarkupLine("[yellow]Bus parking not implemented yet![/]\nPress any key to go back...");
+                    Console.ReadKey();
+                    break;
+
             }
         }
 
-        public static string askRegNumber()
+        public static string askRegNumber(ParkingGarage garage)
         {
             string reg = AnsiConsole.Prompt(
                 new TextPrompt<string>("Enter the registration number:")

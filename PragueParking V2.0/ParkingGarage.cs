@@ -43,7 +43,6 @@ namespace PragueParking_V2._0
         {
             foreach (var spot in ParkingSpots)
             {
-                Console.WriteLine(spot.CanVehicleFit + " " + spot.AvailableSize);
                 if (spot.CanVehicleFit(spot.SpotNumber, vehicle))
                 {
                     //We found a spot in which the vehicle can fit, so we park it there

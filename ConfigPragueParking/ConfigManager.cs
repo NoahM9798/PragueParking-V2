@@ -1,12 +1,11 @@
 ﻿using System;
 using System.IO;
-using System.Text.Json;
+using Newtonsoft.Json;
 
 namespace ConfigPragueParking
 {
     public class ConfigManager
     {
-        // Use a relative path or AppContext.BaseDirectory depending on your setup
         private static readonly string configPath = "../../../../config.json";
 
         public static GarageConfig LoadConfig()
@@ -28,14 +27,13 @@ namespace ConfigPragueParking
 
             var json = File.ReadAllText(configPath);
 
-            // Use System.Text.Json to deserialize
-            return JsonSerializer.Deserialize<GarageConfig>(json);
+            // Deserialize using Newtonsoft.Json
+            return JsonConvert.DeserializeObject<GarageConfig>(json);
         }
 
         public static void SaveConfig(GarageConfig config)
         {
-            var options = new JsonSerializerOptions { WriteIndented = true };
-            string json = JsonSerializer.Serialize(config, options);
+            string json = JsonConvert.SerializeObject(config, Formatting.Indented);
             File.WriteAllText(configPath, json);
         }
 
@@ -49,5 +47,4 @@ namespace ConfigPragueParking
             return File.ReadAllText(fileName);
         }
     }
-    
 }

@@ -1,18 +1,17 @@
 ﻿using System.Collections.Generic;
-using System.Text.Json;
+using System.IO;
+using Newtonsoft.Json;
 using ConfigPragueParking;
 
 namespace PragueParking_V2._0
 {
     public class Data
     {
-        private static readonly string dataPath = "../../../garageData.json";
+        private static readonly string dataPath = "../../../../garageData.json";
 
         public static void SaveData(ParkingGarage garage)
         {
-            var options = new JsonSerializerOptions { WriteIndented = true };
-            string json = JsonSerializer.Serialize(garage.ParkingSpots, options);
-
+            string json = JsonConvert.SerializeObject(garage.ParkingSpots, Formatting.Indented);
             ConfigManager.SaveGarage(dataPath, json);
         }
 
@@ -22,7 +21,7 @@ namespace PragueParking_V2._0
                 return; // No saved data yet → garage will initialize fresh
 
             string json = ConfigManager.LoadGarage(dataPath);
-            var parkingSpots = JsonSerializer.Deserialize<List<ParkingSpot>>(json);
+            var parkingSpots = JsonConvert.DeserializeObject<List<ParkingSpot>>(json);
 
             if (parkingSpots != null && parkingSpots.Count > 0)
             {

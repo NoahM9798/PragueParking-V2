@@ -2,8 +2,6 @@
 using ConfigPragueParking;
 using PragueParking_V2._0;
 using Spectre.Console;
-Console.WriteLine($"Does file exist? {File.Exists(".. / .. / .. / .. /config.json")}");
-Console.WriteLine($"Looking for config at: {Path.GetFullPath("../../../../")}");
 ParkingGarage Garage = new ParkingGarage();
 
 

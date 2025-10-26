@@ -11,13 +11,13 @@ namespace PragueParking_V2._0
 {
     public class MC : Vehicle
     {
-        private GarageConfig _config = new GarageConfig();
 
         //Constructor
         public MC(string RegNumber) : base(RegNumber)
         {
-            Size = _config.MCSize;
-            PrizePerHour = _config.PricePerMC;
+            Size = ParkingGarage.Config.MCSize;
+            PrizePerHour = ParkingGarage.Config.PricePerMC;
+            VehicleType = "MC";
         }
     }
 }

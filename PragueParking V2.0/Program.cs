@@ -26,7 +26,7 @@ while (!Menu.Exit)
         case "Show Garage":
             break;
         case "Reload Config":
-            ConfigManager.LoadConfig(); //TODO: Check if this works
+            Garage.Config = ConfigManager.LoadConfig(); 
             break;
         case "Exit":
             Menu.Exit = true;

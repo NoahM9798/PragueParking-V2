@@ -12,7 +12,7 @@ namespace ConfigPragueParking
         {
             if (!File.Exists(configPath))
             {
-                // File does not exist → create default config
+                // File does not exist then we create default config
                 var defaultConfig = new GarageConfig
                 {
                     SpotSize = 4,

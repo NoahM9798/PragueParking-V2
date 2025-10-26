@@ -7,5 +7,8 @@ namespace ConfigPragueParking
         public int GarageSize { get; set; }
         public int CarSize { get; set; }
         public int MCSize { get; set; }
+        public int PricePerMC { get; set; }
+        public int PricePerCar { get; set; }
+
     }
 }

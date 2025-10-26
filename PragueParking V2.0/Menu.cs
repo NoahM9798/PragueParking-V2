@@ -43,7 +43,7 @@ namespace PragueParking_V2._0
                        );
         }
 
-        public static void parkOptions(ParkingGarage garage)
+        public static void showParkInterface(ParkingGarage garage)
         {
             var parkChoice = AnsiConsole.Prompt(
             new SelectionPrompt<string>()
@@ -58,49 +58,115 @@ namespace PragueParking_V2._0
             switch (parkChoice)
             {
                 case "Car":
-                    string carReg = askRegNumber(garage);
+                    string carReg = askRegNumber();
                     Car car = new Car(carReg);
-                    if (garage.VehicleExists(car.RegNumber))
+                    if (garage.getVehicleByReg(car.RegNumber) != null)
                     {
                         //Vehicle with the same registration number already exists
-                        AnsiConsole.MarkupLine("[red]A vehicle with the same registration number is already parked![/]\nPress any key to go back...");
-                        Console.ReadKey();
+                        AnsiConsole.MarkupLine("[red]A vehicle with the same registration number is already parked![/]");
+                        pause();
                         break;
                     }
                     if (garage.ParkVehicle(car))
                     {
                         //Successfully parked
-                        AnsiConsole.MarkupLine("[green]Car parked successfully![/]\nPress any key to go back...");
-                        Console.ReadKey();
+                        AnsiConsole.MarkupLine("[green]Car parked successfully![/]");
+                        pause();
                         break;
                     }
-                    AnsiConsole.MarkupLine("[red]No available spot for the car![/]\nPress any key to go back...");
-                    Console.ReadKey();
+                    AnsiConsole.MarkupLine("[red]No available spot for the car![/]");
+                    pause();
                     break;
                 case "Motorcycle":
-                    string mcReg = askRegNumber(garage);
+                    string mcReg = askRegNumber();
                     MC mc = new MC(mcReg);
-                    if (garage.VehicleExists(mc.RegNumber))
+                    if (garage.getVehicleByReg(mc.RegNumber) != null)
                     {
                         //Vehicle with the same registration number already exists
-                        AnsiConsole.MarkupLine("[red]A vehicle with the same registration number is already parked![/]\nPress any key to go back...");
-                        Console.ReadKey();
+                        AnsiConsole.MarkupLine("[red]A vehicle with the same registration number is already parked![/]");
+                        pause();
                         break;
                     }
+                    if (garage.ParkVehicle(mc))
+                    {
+                        //Successfully parked
+                        AnsiConsole.MarkupLine("[green]MC parked successfully![/]");
+                        pause();
+                        break;
+                    }
+                    AnsiConsole.MarkupLine("[red]No available spot for the MC![/]");
+                    pause();
                     break;
                 case "Bicycle":
-                    AnsiConsole.MarkupLine("[yellow]Bicycle parking not implemented yet![/]\nPress any key to go back...");
-                    Console.ReadKey();
+                    AnsiConsole.MarkupLine("[yellow]Bicycle parking not implemented yet![/]");
+                    pause();
                     break;
                 case "Bus":
-                    AnsiConsole.MarkupLine("[yellow]Bus parking not implemented yet![/]\nPress any key to go back...");
-                    Console.ReadKey();
+                    AnsiConsole.MarkupLine("[yellow]Bus parking not implemented yet![/]");
+                    pause();
                     break;
 
             }
         }
 
-        public static string askRegNumber(ParkingGarage garage)
+        public static void showRetrieveInterface(ParkingGarage garage)
+        {
+            string reg = askRegNumber();
+            Vehicle vehicleToGet = garage.getVehicleByReg(reg);
+            if (vehicleToGet != null)
+            {
+                //It exists, lets geeet it'
+                if (garage.TryRemoveVehicle(vehicleToGet))
+                {
+                    AnsiConsole.MarkupLine($"[green]Vehicle retrieved successfully! Total cost: {garage.FinalPrice(vehicleToGet, DateTime.Now)}[/]");
+                    pause();
+                    return;
+                }
+            }
+            else
+            {
+                AnsiConsole.MarkupLine("[red]No vehicle with such registration number found![/]");
+                pause();
+                return;
+            }
+        }
+        public static void showMoveInterface(ParkingGarage garage)
+        {
+            string reg = askRegNumber();
+            Vehicle vehicleToMove = garage.getVehicleByReg(reg);
+            if (vehicleToMove != null)
+            {
+                //Vehicle exists, lets move it to the spot desired
+                int newSpot = AnsiConsole.Prompt(
+                    new TextPrompt<int>("Enter the spot number to move the vehicle to:")
+                    .Validate((input) => input switch
+                    {
+                        _ when input < 1 || input > garage.ParkingSpots.Count => ValidationResult.Error("[red]Invalid spot number[/]"),
+                        _ => ValidationResult.Success(),
+                    })
+                );
+                if (garage.ParkVehicle(vehicleToMove, newSpot))
+                {
+                    AnsiConsole.MarkupLine($"[green]Vehicle moved successfully to spot {newSpot}![/]");
+                    pause();
+                    return;
+                }
+                else
+                {
+                    AnsiConsole.MarkupLine("[red]Failed to move vehicle. The spot may be full or too small.[/]");
+                    pause();
+                    return;
+                }
+            }
+            else
+            {
+                AnsiConsole.MarkupLine("[red]No vehicle with such registration number found![/]");
+                pause();
+                return;
+            }
+        }
+
+        public static string askRegNumber()
         {
             string reg = AnsiConsole.Prompt(
                 new TextPrompt<string>("Enter the registration number:")
@@ -112,6 +178,13 @@ namespace PragueParking_V2._0
                 })
             );
             return reg;
+        }
+
+        public static string pause()
+        {
+            AnsiConsole.MarkupLine("[yellow]Press any key to go back...[/]");
+            Console.ReadKey();
+            return "";
         }
 
     }

@@ -11,16 +11,10 @@ namespace PragueParking_V2._0
     {
         //variables
         public List<Vehicle> VehiclesParked { get; set; } = new List<Vehicle>();
-        public int AvailableSize { get; set; } = 4;
+        public int AvailableSize { get; set; }
         public int SpotNumber { get; set; }
         public string RegistrationNumber { get; set; }
 
-        //Constructor
-        public ParkingSpot()
-        {
-            //Load following data from JSON in the future
-            
-        }
 
         //Methods
         public void AddVehicle(Vehicle vehicle, int spotnumber)
@@ -30,7 +24,6 @@ namespace PragueParking_V2._0
 
         public void RemoveVehicle(Vehicle vehicle, int spotnumber)
         {
-            
             VehiclesParked.Remove(vehicle);
         }
 

@@ -18,7 +18,9 @@ namespace ConfigPragueParking
                     SpotSize = 4,
                     GarageSize = 100,
                     CarSize = 4,
-                    MCSize = 2
+                    MCSize = 2,
+                    PricePerMC = 15,
+                    PricePerCar = 30
                 };
 
                 SaveConfig(defaultConfig);

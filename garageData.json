@@ -2,14 +2,42 @@
   {
     "VehiclesParked": [
       {
-        "Size": 4,
+        "Size": 0,
+        "RegNumber": "hjk123",
+        "ArrivalTime": "2025-10-26T11:18:43.7984706+01:00",
+        "PrizePerHour": 0,
+        "VehicleType": null
+      },
+      {
+        "Size": 0,
+        "RegNumber": "car123",
+        "ArrivalTime": "2025-10-26T16:09:38.684179+01:00",
+        "PrizePerHour": 0,
+        "VehicleType": "Car"
+      },
+      {
+        "Size": 0,
+        "RegNumber": "mc1234",
+        "ArrivalTime": "2025-10-26T16:09:46.0402763+01:00",
+        "PrizePerHour": 0,
+        "VehicleType": null
+      },
+      {
+        "Size": 0,
+        "RegNumber": "mc2345",
+        "ArrivalTime": "2025-10-26T16:09:52.6556572+01:00",
+        "PrizePerHour": 0,
+        "VehicleType": null
+      },
+      {
+        "Size": 0,
         "RegNumber": "abc123",
-        "ArrivalTime": "2025-10-25T18:58:51.5095427+02:00",
-        "PrizePerHour": 60,
+        "ArrivalTime": "2025-10-26T16:11:11.8188339+01:00",
+        "PrizePerHour": 0,
         "VehicleType": "Car"
       }
     ],
-    "AvailableSize": 0,
+    "AvailableSize": 4,
     "SpotNumber": 1,
     "RegistrationNumber": null
   },
@@ -28,14 +56,37 @@
     "RegistrationNumber": null
   },
   {
-    "VehiclesParked": [],
-    "AvailableSize": 4,
+    "VehiclesParked": [
+      {
+        "Size": 4,
+        "RegNumber": "abc456",
+        "ArrivalTime": "2025-10-26T11:03:20.003586+01:00",
+        "PrizePerHour": 60,
+        "VehicleType": "Car"
+      }
+    ],
+    "AvailableSize": 0,
     "SpotNumber": 3,
     "RegistrationNumber": null
   },
   {
-    "VehiclesParked": [],
-    "AvailableSize": 4,
+    "VehiclesParked": [
+      {
+        "Size": 1,
+        "RegNumber": "hjk234",
+        "ArrivalTime": "2025-10-26T11:04:36.1687326+01:00",
+        "PrizePerHour": 30,
+        "VehicleType": null
+      },
+      {
+        "Size": 1,
+        "RegNumber": "hjk345",
+        "ArrivalTime": "2025-10-26T11:08:25.3197519+01:00",
+        "PrizePerHour": 30,
+        "VehicleType": null
+      }
+    ],
+    "AvailableSize": 2,
     "SpotNumber": 4,
     "RegistrationNumber": null
   },

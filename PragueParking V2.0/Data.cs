@@ -18,7 +18,7 @@ namespace PragueParking_V2._0
         public static void LoadData(ParkingGarage garage)
         {
             if (!File.Exists(dataPath))
-                return; // No saved data yet → garage will initialize fresh
+                return; 
 
             string json = ConfigManager.LoadGarage(dataPath);
             var parkingSpots = JsonConvert.DeserializeObject<List<ParkingSpot>>(json);

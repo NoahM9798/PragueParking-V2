@@ -1,7 +1,5 @@
-﻿//Skriv ut menyn
-using ConfigPragueParking;
+﻿using ConfigPragueParking;
 using PragueParking_V2._0;
-using Spectre.Console;
 ParkingGarage Garage = new ParkingGarage();
 
 
@@ -12,20 +10,23 @@ while (!Menu.Exit)
     switch (Menu.Choice)
     {
         case "Park Vehicle":
-            Menu.parkOptions(Garage);
+            Menu.showParkInterface(Garage);
+            Data.SaveData(Garage);
             break;
         case "Retrieve Vehicle":
+            Menu.showRetrieveInterface(Garage);
+            Data.SaveData(Garage);
             break;
         case "Move Vehicle":
+            Menu.showMoveInterface(Garage);
+            Data.SaveData(Garage);
             break;
         case "Search Vehicle":
             break;
         case "Show Garage":
             break;
-        case "Reload price list":
-            Vehicle v = new Vehicle("");
-            Console.WriteLine(v.VehicleType);
-            Console.ReadLine();
+        case "Reload Config":
+            ConfigManager.LoadConfig(); //TODO: Check if this works
             break;
         case "Exit":
             Menu.Exit = true;

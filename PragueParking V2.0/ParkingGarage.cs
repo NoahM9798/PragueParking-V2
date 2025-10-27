@@ -14,10 +14,9 @@ namespace PragueParking_V2._0
         //A list of all the parking spots
         public List<ParkingSpot> ParkingSpots { get; set; } = new List<ParkingSpot>();
 
-        public static GarageConfig Config;
         public ParkingGarage()
         {
-            Config = ConfigManager.LoadConfig();
+            Data.Config = ConfigManager.LoadConfig();
             InitializeSpots();
         }
 
@@ -31,12 +30,12 @@ namespace PragueParking_V2._0
             // If no saved data, create fresh parking spots
             if (ParkingSpots == null || ParkingSpots.Count == 0)
             {
-                for (int i = 1; i <= Config.GarageSize; i++)
+                for (int i = 1; i <= Data.Config.GarageSize; i++)
                 {
                     ParkingSpots.Add(new ParkingSpot
                     {
                         SpotNumber = i,
-                        AvailableSize = Config.SpotSize
+                        AvailableSize = Data.Config.SpotSize
                     });
                 }
             }

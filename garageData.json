@@ -2,42 +2,14 @@
   {
     "VehiclesParked": [
       {
-        "Size": 0,
-        "RegNumber": "hjk123",
-        "ArrivalTime": "2025-10-26T11:18:43.7984706+01:00",
-        "PrizePerHour": 0,
-        "VehicleType": null
-      },
-      {
-        "Size": 0,
-        "RegNumber": "car123",
-        "ArrivalTime": "2025-10-26T16:09:38.684179+01:00",
-        "PrizePerHour": 0,
-        "VehicleType": "Car"
-      },
-      {
-        "Size": 0,
-        "RegNumber": "mc1234",
-        "ArrivalTime": "2025-10-26T16:09:46.0402763+01:00",
-        "PrizePerHour": 0,
-        "VehicleType": null
-      },
-      {
-        "Size": 0,
-        "RegNumber": "mc2345",
-        "ArrivalTime": "2025-10-26T16:09:52.6556572+01:00",
-        "PrizePerHour": 0,
-        "VehicleType": null
-      },
-      {
-        "Size": 0,
-        "RegNumber": "qag432",
-        "ArrivalTime": "2025-10-26T16:22:22.618593+01:00",
+        "Size": 4,
+        "RegNumber": "uhf123",
+        "ArrivalTime": "2025-10-27T15:25:30.4493558+01:00",
         "PrizePerHour": 0,
         "VehicleType": "Car"
       }
     ],
-    "AvailableSize": 4,
+    "AvailableSize": 0,
     "SpotNumber": 1,
     "RegistrationNumber": null
   },
@@ -46,8 +18,8 @@
       {
         "Size": 4,
         "RegNumber": "abc234",
-        "ArrivalTime": "2025-10-25T18:59:00.1480914+02:00",
-        "PrizePerHour": 60,
+        "ArrivalTime": "2025-10-27T15:18:43.889411+01:00",
+        "PrizePerHour": 0,
         "VehicleType": "Car"
       }
     ],
@@ -58,11 +30,18 @@
   {
     "VehiclesParked": [
       {
-        "Size": 4,
-        "RegNumber": "abc456",
-        "ArrivalTime": "2025-10-26T11:03:20.003586+01:00",
-        "PrizePerHour": 60,
-        "VehicleType": "Car"
+        "Size": 2,
+        "RegNumber": "abb123",
+        "ArrivalTime": "2025-10-27T15:18:50.5913861+01:00",
+        "PrizePerHour": 0,
+        "VehicleType": "MC"
+      },
+      {
+        "Size": 2,
+        "RegNumber": "abb234",
+        "ArrivalTime": "2025-10-27T15:18:57.7624841+01:00",
+        "PrizePerHour": 0,
+        "VehicleType": "MC"
       }
     ],
     "AvailableSize": 0,
@@ -72,21 +51,14 @@
   {
     "VehiclesParked": [
       {
-        "Size": 1,
-        "RegNumber": "hjk234",
-        "ArrivalTime": "2025-10-26T11:04:36.1687326+01:00",
-        "PrizePerHour": 30,
-        "VehicleType": null
-      },
-      {
-        "Size": 1,
-        "RegNumber": "hjk345",
-        "ArrivalTime": "2025-10-26T11:08:25.3197519+01:00",
-        "PrizePerHour": 30,
-        "VehicleType": null
+        "Size": 4,
+        "RegNumber": "klm123",
+        "ArrivalTime": "2025-10-27T15:19:12.7192786+01:00",
+        "PrizePerHour": 0,
+        "VehicleType": "Car"
       }
     ],
-    "AvailableSize": 2,
+    "AvailableSize": 0,
     "SpotNumber": 4,
     "RegistrationNumber": null
   },
@@ -649,8 +621,16 @@
     "RegistrationNumber": null
   },
   {
-    "VehiclesParked": [],
-    "AvailableSize": 4,
+    "VehiclesParked": [
+      {
+        "Size": 4,
+        "RegNumber": "abc123",
+        "ArrivalTime": "2025-10-27T15:18:39.6786095+01:00",
+        "PrizePerHour": 0,
+        "VehicleType": "Car"
+      }
+    ],
+    "AvailableSize": 0,
     "SpotNumber": 98,
     "RegistrationNumber": null
   },

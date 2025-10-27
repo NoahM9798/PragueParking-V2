@@ -24,9 +24,11 @@ while (!Menu.Exit)
         case "Search Vehicle":
             break;
         case "Show Garage":
+            Menu.showGarage(Garage);
             break;
         case "Reload Config":
-            Garage.Config = ConfigManager.LoadConfig(); 
+            Data.Config = ConfigManager.LoadConfig(); //TODO: Update garage spots based on new config
+
             break;
         case "Exit":
             Menu.Exit = true;

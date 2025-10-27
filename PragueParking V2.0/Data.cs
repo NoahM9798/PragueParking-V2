@@ -8,6 +8,7 @@ namespace PragueParking_V2._0
     public class Data
     {
         private static readonly string dataPath = "../../../../garageData.json";
+        public static GarageConfig Config = ConfigManager.LoadConfig();
 
         public static void SaveData(ParkingGarage garage)
         {

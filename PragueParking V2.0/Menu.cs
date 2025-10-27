@@ -20,7 +20,7 @@ namespace PragueParking_V2._0
         "Move Vehicle",
         "Search Vehicle",
         "Show Garage",
-        "Reload price list",
+        "Reload Config",
         "Exit"
         ];
         public static string Choice;
@@ -164,6 +164,31 @@ namespace PragueParking_V2._0
                 pause();
                 return;
             }
+        }
+
+        public static void showGarage(ParkingGarage garage)
+        {
+            var table = new Table();
+            table.AddColumn(new TableColumn("Spot Number").Centered());
+            table.AddColumn(new TableColumn("Vehicles").Centered());
+            table.AddColumn(new TableColumn("Arrival Time").Centered());
+            foreach (var spot in garage.ParkingSpots)
+            {
+                if (spot.VehiclesParked.Count > 0)
+                {
+                    foreach (Vehicle v in spot.VehiclesParked)
+                    {
+                        table.AddRow(spot.SpotNumber.ToString(), v.ToString(), v.ArrivalTime.ToString());
+                    }
+                }
+                else
+                {
+                    table.AddRow(spot.SpotNumber.ToString(), "Empty", "NULL");
+                }
+            }
+            AnsiConsole.Write(table);
+
+            pause();
         }
 
         public static string askRegNumber()

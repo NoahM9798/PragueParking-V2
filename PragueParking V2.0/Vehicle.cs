@@ -22,7 +22,7 @@ namespace PragueParking_V2._0
 
         public override string ToString()
         {
-            return $"{VehicleType} - Reg: {RegNumber}, Size: {Size}, Arrived: {ArrivalTime}";
+            return $"{VehicleType} - Reg: {RegNumber}";
         }
     }
 }

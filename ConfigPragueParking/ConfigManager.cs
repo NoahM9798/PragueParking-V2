@@ -29,7 +29,6 @@ namespace ConfigPragueParking
 
             var json = File.ReadAllText(configPath);
 
-            // Deserialize using Newtonsoft.Json
             return JsonConvert.DeserializeObject<GarageConfig>(json);
         }
 

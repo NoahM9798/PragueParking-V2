@@ -12,8 +12,8 @@ namespace PragueParking_V2._0
         //Constructor
         public Car(string RegNumber) : base(RegNumber)
         {
-            Size = ParkingGarage.Config.CarSize;
-            PrizePerHour = ParkingGarage.Config.PricePerCar;
+            Size = Data.Config.CarSize;
+            PrizePerHour = Data.Config.PricePerCar;
             VehicleType = "Car";
         }
     }

@@ -14,22 +14,23 @@ namespace PragueParking_V2._0
         //A list of all the parking spots
         public List<ParkingSpot> ParkingSpots { get; set; } = new List<ParkingSpot>();
 
-        public ParkingGarage()
+        public ParkingGarage(bool resetWithNewValues = false)
         {
             Data.Config = ConfigManager.LoadConfig();
-            InitializeSpots();
+            InitializeSpots(resetWithNewValues);
         }
 
         //Methods
 
         //Initialize parking spots based on json file, if its null create new spots
-        private void InitializeSpots()
+        private void InitializeSpots(bool resetWithNewValues)
         {
             Data.LoadData(this);
 
-            // If no saved data, create fresh parking spots
-            if (ParkingSpots == null || ParkingSpots.Count == 0)
+            // If no saved data, create fresh parking spots, or if resetWithNewValues is true
+            if (ParkingSpots == null || ParkingSpots.Count == 0 || resetWithNewValues)
             {
+                ParkingSpots.Clear();
                 for (int i = 1; i <= Data.Config.GarageSize; i++)
                 {
                     ParkingSpots.Add(new ParkingSpot
@@ -67,7 +68,9 @@ namespace PragueParking_V2._0
             }
             else
             {
-                int hoursParked = (int)Math.Ceiling((totalMinutes - 10) / 60.0);
+                double totalHours = TimeParked.TotalHours;
+
+                int hoursParked = (int)Math.Ceiling(totalHours);
                 return hoursParked * vehicle.PrizePerHour;
             }
         }

@@ -1,6 +1,8 @@
 {
-  "SpotSize": 4,
-  "GarageSize": 100,
-  "CarSize": 8,
-  "MCSize": 2
+  "SpotSize": 8,
+  "GarageSize": 120,
+  "CarSize": 4,
+  "MCSize": 2,
+  "PricePerMC": 15,
+  "PricePerCar": 30
 }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Spectre.Console;
 using Figgle.Fonts;
 using System.Diagnostics.Metrics;
+using ConfigPragueParking;
 namespace PragueParking_V2._0
 {
 
@@ -25,7 +26,6 @@ namespace PragueParking_V2._0
         ];
         public static string Choice;
         public static bool Exit = false;
-
 
         //Method to display choices
         public static void ShowChoices()
@@ -108,6 +108,27 @@ namespace PragueParking_V2._0
 
             }
         }
+        
+        public static ParkingGarage resetGarageInterface(ParkingGarage garage)
+        {
+            bool confirmResetGarage = AnsiConsole.Confirm("If you reload config the garage and its vehicles will reset for the renovation, " +
+            "are you sure you want to continue?");
+            if (confirmResetGarage)
+            {
+                Data.Config = ConfigManager.LoadConfig();
+                ParkingGarage newGarage = new ParkingGarage(true);
+                AnsiConsole.MarkupLine("[green]Garage reset successfully![/]");
+                pause();
+                return newGarage;
+            }
+            else
+            {
+                AnsiConsole.MarkupLine("[yellow]Garage reset cancelled.[/]");
+                pause();
+                return garage;
+            }
+        }
+
 
         public static void showRetrieveInterface(ParkingGarage garage)
         {

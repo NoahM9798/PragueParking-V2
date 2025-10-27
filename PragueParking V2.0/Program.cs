@@ -27,8 +27,7 @@ while (!Menu.Exit)
             Menu.showGarage(Garage);
             break;
         case "Reload Config":
-            Data.Config = ConfigManager.LoadConfig(); //TODO: Update garage spots based on new config
-
+            Garage = Menu.resetGarageInterface(Garage);
             break;
         case "Exit":
             Menu.Exit = true;

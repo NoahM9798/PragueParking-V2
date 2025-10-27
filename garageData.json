@@ -1,649 +1,722 @@
 [
   {
-    "VehiclesParked": [
-      {
-        "Size": 4,
-        "RegNumber": "uhf123",
-        "ArrivalTime": "2025-10-27T15:25:30.4493558+01:00",
-        "PrizePerHour": 0,
-        "VehicleType": "Car"
-      }
-    ],
-    "AvailableSize": 0,
+    "VehiclesParked": [],
+    "AvailableSize": 8,
     "SpotNumber": 1,
     "RegistrationNumber": null
   },
   {
-    "VehiclesParked": [
-      {
-        "Size": 4,
-        "RegNumber": "abc234",
-        "ArrivalTime": "2025-10-27T15:18:43.889411+01:00",
-        "PrizePerHour": 0,
-        "VehicleType": "Car"
-      }
-    ],
-    "AvailableSize": 0,
+    "VehiclesParked": [],
+    "AvailableSize": 8,
     "SpotNumber": 2,
     "RegistrationNumber": null
   },
   {
-    "VehiclesParked": [
-      {
-        "Size": 2,
-        "RegNumber": "abb123",
-        "ArrivalTime": "2025-10-27T15:18:50.5913861+01:00",
-        "PrizePerHour": 0,
-        "VehicleType": "MC"
-      },
-      {
-        "Size": 2,
-        "RegNumber": "abb234",
-        "ArrivalTime": "2025-10-27T15:18:57.7624841+01:00",
-        "PrizePerHour": 0,
-        "VehicleType": "MC"
-      }
-    ],
-    "AvailableSize": 0,
+    "VehiclesParked": [],
+    "AvailableSize": 8,
     "SpotNumber": 3,
     "RegistrationNumber": null
   },
   {
-    "VehiclesParked": [
-      {
-        "Size": 4,
-        "RegNumber": "klm123",
-        "ArrivalTime": "2025-10-27T15:19:12.7192786+01:00",
-        "PrizePerHour": 0,
-        "VehicleType": "Car"
-      }
-    ],
-    "AvailableSize": 0,
+    "VehiclesParked": [],
+    "AvailableSize": 8,
     "SpotNumber": 4,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 5,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 6,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 7,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 8,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 9,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 10,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 11,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 12,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 13,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 14,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 15,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 16,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 17,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 18,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 19,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 20,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 21,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 22,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 23,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 24,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 25,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 26,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 27,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 28,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 29,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 30,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 31,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 32,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 33,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 34,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 35,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 36,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 37,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 38,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 39,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 40,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 41,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 42,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 43,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 44,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 45,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 46,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 47,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 48,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 49,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 50,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 51,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 52,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 53,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 54,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 55,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 56,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 57,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 58,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 59,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 60,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 61,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 62,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 63,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 64,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 65,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 66,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 67,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 68,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 69,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 70,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 71,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 72,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 73,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 74,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 75,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 76,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 77,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 78,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 79,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 80,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 81,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 82,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 83,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 84,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 85,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 86,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 87,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 88,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 89,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 90,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 91,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 92,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 93,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 94,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 95,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 96,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 97,
     "RegistrationNumber": null
   },
   {
-    "VehiclesParked": [
-      {
-        "Size": 4,
-        "RegNumber": "abc123",
-        "ArrivalTime": "2025-10-27T15:18:39.6786095+01:00",
-        "PrizePerHour": 0,
-        "VehicleType": "Car"
-      }
-    ],
-    "AvailableSize": 0,
+    "VehiclesParked": [],
+    "AvailableSize": 8,
     "SpotNumber": 98,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 99,
     "RegistrationNumber": null
   },
   {
     "VehiclesParked": [],
-    "AvailableSize": 4,
+    "AvailableSize": 8,
     "SpotNumber": 100,
+    "RegistrationNumber": null
+  },
+  {
+    "VehiclesParked": [],
+    "AvailableSize": 8,
+    "SpotNumber": 101,
+    "RegistrationNumber": null
+  },
+  {
+    "VehiclesParked": [],
+    "AvailableSize": 8,
+    "SpotNumber": 102,
+    "RegistrationNumber": null
+  },
+  {
+    "VehiclesParked": [],
+    "AvailableSize": 8,
+    "SpotNumber": 103,
+    "RegistrationNumber": null
+  },
+  {
+    "VehiclesParked": [],
+    "AvailableSize": 8,
+    "SpotNumber": 104,
+    "RegistrationNumber": null
+  },
+  {
+    "VehiclesParked": [],
+    "AvailableSize": 8,
+    "SpotNumber": 105,
+    "RegistrationNumber": null
+  },
+  {
+    "VehiclesParked": [],
+    "AvailableSize": 8,
+    "SpotNumber": 106,
+    "RegistrationNumber": null
+  },
+  {
+    "VehiclesParked": [],
+    "AvailableSize": 8,
+    "SpotNumber": 107,
+    "RegistrationNumber": null
+  },
+  {
+    "VehiclesParked": [],
+    "AvailableSize": 8,
+    "SpotNumber": 108,
+    "RegistrationNumber": null
+  },
+  {
+    "VehiclesParked": [],
+    "AvailableSize": 8,
+    "SpotNumber": 109,
+    "RegistrationNumber": null
+  },
+  {
+    "VehiclesParked": [],
+    "AvailableSize": 8,
+    "SpotNumber": 110,
+    "RegistrationNumber": null
+  },
+  {
+    "VehiclesParked": [],
+    "AvailableSize": 8,
+    "SpotNumber": 111,
+    "RegistrationNumber": null
+  },
+  {
+    "VehiclesParked": [],
+    "AvailableSize": 8,
+    "SpotNumber": 112,
+    "RegistrationNumber": null
+  },
+  {
+    "VehiclesParked": [],
+    "AvailableSize": 8,
+    "SpotNumber": 113,
+    "RegistrationNumber": null
+  },
+  {
+    "VehiclesParked": [],
+    "AvailableSize": 8,
+    "SpotNumber": 114,
+    "RegistrationNumber": null
+  },
+  {
+    "VehiclesParked": [],
+    "AvailableSize": 8,
+    "SpotNumber": 115,
+    "RegistrationNumber": null
+  },
+  {
+    "VehiclesParked": [],
+    "AvailableSize": 8,
+    "SpotNumber": 116,
+    "RegistrationNumber": null
+  },
+  {
+    "VehiclesParked": [],
+    "AvailableSize": 8,
+    "SpotNumber": 117,
+    "RegistrationNumber": null
+  },
+  {
+    "VehiclesParked": [],
+    "AvailableSize": 8,
+    "SpotNumber": 118,
+    "RegistrationNumber": null
+  },
+  {
+    "VehiclesParked": [],
+    "AvailableSize": 8,
+    "SpotNumber": 119,
+    "RegistrationNumber": null
+  },
+  {
+    "VehiclesParked": [],
+    "AvailableSize": 8,
+    "SpotNumber": 120,
     "RegistrationNumber": null
   }
 ]

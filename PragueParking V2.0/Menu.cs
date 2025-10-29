@@ -67,7 +67,7 @@ namespace PragueParking_V2._0
                         pause();
                         break;
                     }
-                    if (garage.ParkVehicle(car))
+                    if (garage.TryParkVehicle(car))
                     {
                         //Successfully parked
                         AnsiConsole.MarkupLine("[green]Car parked successfully![/]");
@@ -87,7 +87,7 @@ namespace PragueParking_V2._0
                         pause();
                         break;
                     }
-                    if (garage.ParkVehicle(mc))
+                    if (garage.TryParkVehicle(mc))
                     {
                         //Successfully parked
                         AnsiConsole.MarkupLine("[green]MC parked successfully![/]");
@@ -179,7 +179,7 @@ namespace PragueParking_V2._0
                         _ => ValidationResult.Success(),
                     })
                 );
-                if (garage.ParkVehicle(vehicleToMove, newSpot))
+                if (garage.TryParkVehicle(vehicleToMove, newSpot))
                 {
                     AnsiConsole.MarkupLine($"[green]Vehicle moved successfully to spot {newSpot}![/]");
                     pause();

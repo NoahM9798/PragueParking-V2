@@ -90,7 +90,7 @@ namespace PragueParking_V2._0
         }
 
         //Methods that fills a function
-        public bool ParkVehicle(Vehicle vehicle, int spotnumber = -1)
+        public bool TryParkVehicle(Vehicle vehicle, int spotnumber = -1)
         {
             if (spotnumber != -1)
             {

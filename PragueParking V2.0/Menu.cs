@@ -111,15 +111,28 @@ namespace PragueParking_V2._0
         
         public static ParkingGarage resetGarageInterface(ParkingGarage garage)
         {
-            bool confirmResetGarage = AnsiConsole.Confirm("If you reload config the garage and its vehicles will reset for the renovation, " +
+            bool confirmResetGarage = AnsiConsole.Confirm("If you reload config with changes to spot or vehicle size, \n" +
+                "or removed spots with vehicles on them,\n" +
+                "the garage and its vehicles will reset for the renovation, " +
             "are you sure you want to continue?");
             if (confirmResetGarage)
             {
                 Data.Config = ConfigManager.LoadConfig();
-                ParkingGarage newGarage = new ParkingGarage(true);
+                //First we need to see if user only changed garage size and removed spots with no vehicles
+                //Then we dont need to remove all the vehicles, we can just add/decrease number of spots.
+                if (Data.canHaveGarageOpenDuringRenovation(garage))
+                {
+                    //We can keep the garage open, just need to adjust spots
+                    garage.AdjustSize(Data.Config.GarageSize);
+                    AnsiConsole.MarkupLine("[green]Garage spots changed successfully![/]");
+                    pause();
+                    return garage;
+                }
+                //Here sizes of spots or vehicles has been changed, we need to reset the whole garage
+                ParkingGarage Garage = new ParkingGarage(true);
                 AnsiConsole.MarkupLine("[green]Garage reset successfully![/]");
                 pause();
-                return newGarage;
+                return Garage;
             }
             else
             {
@@ -139,7 +152,7 @@ namespace PragueParking_V2._0
                 //It exists, lets geeet it'
                 if (garage.TryRemoveVehicle(vehicleToGet))
                 {
-                    AnsiConsole.MarkupLine($"[green]Vehicle retrieved successfully! Total cost: {garage.FinalPrice(vehicleToGet, DateTime.Now)}[/]");
+                    AnsiConsole.MarkupLine($"[green]Vehicle retrieved successfully! Total cost: {garage.FinalPrice(vehicleToGet, DateTime.Now)}CZK[/]");
                     pause();
                     return;
                 }
@@ -233,5 +246,11 @@ namespace PragueParking_V2._0
             return "";
         }
 
+        public static void showSearchResult(Vehicle v, ParkingGarage garage)
+        {
+            AnsiConsole.MarkupLine("[blue]Search Result:\n[/]");
+            AnsiConsole.MarkupLine($"[blue]{v.ToString()} is parked on spot {garage.getSpotNumberForVehicle(v)} and arrived there {v.ArrivalTime.ToString()}[/]");
+            pause();
+        }
     }
 }

@@ -22,12 +22,16 @@ while (!Menu.Exit)
             Data.SaveData(Garage);
             break;
         case "Search Vehicle":
+            string reg = Menu.askRegNumber();
+            Vehicle v = Garage.getVehicleByReg(reg);
+            Menu.showSearchResult(v, Garage);
             break;
         case "Show Garage":
             Menu.showGarage(Garage);
             break;
         case "Reload Config":
             Garage = Menu.resetGarageInterface(Garage);
+            Data.SaveData(Garage);
             break;
         case "Exit":
             Menu.Exit = true;

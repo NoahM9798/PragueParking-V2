@@ -57,6 +57,20 @@ namespace PragueParking_V2._0
             }
             return null;
         }
+        public int getSpotNumberForVehicle(Vehicle vehicle)
+        {
+            foreach (var spot in ParkingSpots)
+            {
+                foreach (var v in spot.VehiclesParked)
+                {
+                    if (v == vehicle)
+                    {
+                        return spot.SpotNumber;
+                    }
+                }
+            }
+            return -1; //Vehicle not found
+        }
         public int FinalPrice(Vehicle vehicle, DateTime timeRetrieved)
         {
             TimeSpan TimeParked = timeRetrieved - vehicle.ArrivalTime;
@@ -135,8 +149,24 @@ namespace PragueParking_V2._0
             return false;
         }
 
-        
-
-        
+        public void AdjustSize(int garageSize)
+        {
+            if (garageSize > ParkingSpots.Count())
+            {
+                for (int i = ParkingSpots.Count; i < Data.Config.GarageSize; i++)
+                {
+                    ParkingSpots.Add(new ParkingSpot
+                    {
+                        SpotNumber = i + 1,
+                        AvailableSize = Data.Config.SpotSize
+                    });
+                }
+            }
+            else if (garageSize < ParkingSpots.Count)
+            {
+                //Garage size decreased, we need to remove spots
+                ParkingSpots.RemoveRange(garageSize, ParkingSpots.Count - garageSize);
+            }
+        }
     }
 }

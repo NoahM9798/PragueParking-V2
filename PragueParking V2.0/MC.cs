@@ -15,7 +15,7 @@ namespace PragueParking_V2._0
         public MC(string RegNumber) : base(RegNumber)
         {
             Size = Data.Config.MCSize;
-            PrizePerHour = Data.Config.PricePerMC;
+            PrizePerHour = Data.Config.PricePerHourMC;
             VehicleType = "MC";
         }
     }

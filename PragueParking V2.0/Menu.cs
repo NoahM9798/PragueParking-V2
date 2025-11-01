@@ -53,8 +53,8 @@ namespace PragueParking_V2._0
                 .AddColumn("[bold yellow]Price per Hour (CZK)[/]")
                 .Centered();
 
-            priceTable.AddRow("Car", $"{Data.Config.CarSize}", "[green]20[/]");
-            priceTable.AddRow("Motorcycle", $"{Data.Config.MCSize}", "[green]10[/]");
+            priceTable.AddRow("Car", $"{Data.Config.CarSize}", $"[green]{Data.Config.PricePerHourCar}[/]");
+            priceTable.AddRow("Motorcycle", $"{Data.Config.MCSize}", $"[green]{Data.Config.PricePerHourMC}[/]");
             priceTable.AddRow("First 10 min", "-", "[blue]Free[/]");
 
             var panel = new Panel(priceTable)

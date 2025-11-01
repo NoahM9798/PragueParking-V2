@@ -13,7 +13,7 @@ namespace PragueParking_V2._0
         public Car(string RegNumber) : base(RegNumber)
         {
             Size = Data.Config.CarSize;
-            PrizePerHour = Data.Config.PricePerCar;
+            PrizePerHour = Data.Config.PricePerHourCar;
             VehicleType = "Car";
         }
     }

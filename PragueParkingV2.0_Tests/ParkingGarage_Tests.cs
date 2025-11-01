@@ -10,7 +10,7 @@ namespace PragueParkingV2._0_Tests
         {
             //Arrange
             ParkingGarage garage = new ParkingGarage();
-            Data.Config.PricePerCar = 30; //Set price per car to 30
+            Data.Config.PricePerHourCar = 30; //Set price per car to 30
             Car car = new Car("TEST123");
             DateTime timeParked = DateTime.Now;
             DateTime timeRetrieved = timeParked.AddMinutes(20);

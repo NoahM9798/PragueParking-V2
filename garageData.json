@@ -4,8 +4,8 @@
       {
         "Size": 4,
         "RegNumber": "abc123",
-        "ArrivalTime": "2025-11-01T18:16:39.9821566+01:00",
-        "PrizePerHour": 0,
+        "ArrivalTime": "2025-11-01T19:13:45.1340338+01:00",
+        "PrizePerHour": 30,
         "VehicleType": "Car"
       }
     ],
@@ -17,9 +17,9 @@
     "VehiclesParked": [
       {
         "Size": 4,
-        "RegNumber": "ahk123",
-        "ArrivalTime": "2025-11-01T18:16:46.2303228+01:00",
-        "PrizePerHour": 0,
+        "RegNumber": "kyh123",
+        "ArrivalTime": "2025-11-01T19:13:50.0352054+01:00",
+        "PrizePerHour": 30,
         "VehicleType": "Car"
       }
     ],
@@ -31,20 +31,13 @@
     "VehiclesParked": [
       {
         "Size": 2,
-        "RegNumber": "jkl123",
-        "ArrivalTime": "2025-11-01T18:16:52.8802548+01:00",
-        "PrizePerHour": 0,
-        "VehicleType": "MC"
-      },
-      {
-        "Size": 2,
-        "RegNumber": "lll123",
-        "ArrivalTime": "2025-11-01T18:17:22.9357492+01:00",
-        "PrizePerHour": 0,
+        "RegNumber": "mcc123",
+        "ArrivalTime": "2025-11-01T19:13:55.6266595+01:00",
+        "PrizePerHour": 15,
         "VehicleType": "MC"
       }
     ],
-    "AvailableSize": 0,
+    "AvailableSize": 2,
     "SpotNumber": 3,
     "RegistrationNumber": null
   },
@@ -67,16 +60,8 @@
     "RegistrationNumber": null
   },
   {
-    "VehiclesParked": [
-      {
-        "Size": 2,
-        "RegNumber": "mcc123",
-        "ArrivalTime": "2025-11-01T18:24:35.9794836+01:00",
-        "PrizePerHour": 0,
-        "VehicleType": "MC"
-      }
-    ],
-    "AvailableSize": 2,
+    "VehiclesParked": [],
+    "AvailableSize": 4,
     "SpotNumber": 7,
     "RegistrationNumber": null
   },
@@ -633,8 +618,16 @@
     "RegistrationNumber": null
   },
   {
-    "VehiclesParked": [],
-    "AvailableSize": 4,
+    "VehiclesParked": [
+      {
+        "Size": 2,
+        "RegNumber": "mcl123",
+        "ArrivalTime": "2025-11-01T19:14:23.4220229+01:00",
+        "PrizePerHour": 15,
+        "VehicleType": "MC"
+      }
+    ],
+    "AvailableSize": 2,
     "SpotNumber": 100,
     "RegistrationNumber": null
   }

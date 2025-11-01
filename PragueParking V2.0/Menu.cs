@@ -13,7 +13,6 @@ namespace PragueParking_V2._0
     //Displays the menu and handles user choices
     public class Menu
     {
-
         //Variables
         public static List<string> choices = [
         "Park Vehicle",
@@ -21,6 +20,7 @@ namespace PragueParking_V2._0
         "Move Vehicle",
         "Search Vehicle",
         "Show Garage",
+        "Show Price List",
         "Reload Config",
         "Exit"
         ];
@@ -41,7 +41,35 @@ namespace PragueParking_V2._0
                        .Title("[red bold]Choose one of the following options:[/]")
                        .AddChoices(choices)
                        );
+
+            
         }
+
+        public static void showPriceList()
+        {
+            var priceTable = new Table()
+                .AddColumn("[bold yellow]Vehicle Type[/]")
+                .AddColumn("[bold yellow]Size[/]")
+                .AddColumn("[bold yellow]Price per Hour (CZK)[/]")
+                .Centered();
+
+            priceTable.AddRow("Car", $"{Data.Config.CarSize}", "[green]20[/]");
+            priceTable.AddRow("Motorcycle", $"{Data.Config.MCSize}", "[green]10[/]");
+            priceTable.AddRow("First 10 min", "-", "[blue]Free[/]");
+
+            var panel = new Panel(priceTable)
+            {
+                Border = BoxBorder.Rounded,
+                Header = new PanelHeader("[bold underline green]Prices[/]", Justify.Center),
+                Padding = new Padding(1, 0, 1, 0)
+            };
+
+            // Render layout
+            AnsiConsole.Write(panel);
+            pause();
+        }
+
+
 
         public static void showParkInterface(ParkingGarage garage)
         {
@@ -70,7 +98,7 @@ namespace PragueParking_V2._0
                     if (garage.TryParkVehicle(car))
                     {
                         //Successfully parked
-                        AnsiConsole.MarkupLine("[green]Car parked successfully![/]");
+                        AnsiConsole.MarkupLine($"[green]Car parked successfully on spot {garage.getSpotNumberForVehicle(car)}![/]");
                         pause();
                         break;
                     }
@@ -90,7 +118,7 @@ namespace PragueParking_V2._0
                     if (garage.TryParkVehicle(mc))
                     {
                         //Successfully parked
-                        AnsiConsole.MarkupLine("[green]MC parked successfully![/]");
+                        AnsiConsole.MarkupLine($"[green]MC parked successfully on spot {garage.getSpotNumberForVehicle(mc)}![/]");
                         pause();
                         break;
                     }
@@ -201,6 +229,70 @@ namespace PragueParking_V2._0
         }
 
         public static void showGarage(ParkingGarage garage)
+        {
+            var table = new Table();
+            table.Title = new TableTitle("[yellow]Parking Garage Overview[/]");
+
+            int columns = garage.ParkingSpots.Count / 10;
+            for (int i = 0; i < columns; i++)
+            {
+                table.AddColumn(new TableColumn("").Centered());
+            }
+
+            var spots = garage.ParkingSpots.OrderBy(s => s.SpotNumber).ToList();
+            int totalSpots = spots.Count;
+            int rows = (int)Math.Ceiling(totalSpots / (double)columns);
+
+            for (int row = 0; row < rows; row++)
+            {
+                var rowCells = new List<Markup>();
+
+                for (int col = 0; col < columns; col++)
+                {
+                    int index = row * columns + col;
+                    if (index >= totalSpots)
+                        break;
+
+                    var spot = spots[index];
+                    string color = GetSpotColor(spot);
+                    rowCells.Add(new Markup($"[{color}]{spot.SpotNumber}[/]"));
+                }
+
+                table.AddRow(rowCells.ToArray());
+            }
+            AnsiConsole.Clear();
+            AnsiConsole.Write(new Panel(table));
+
+
+            var showDetailedVersion = AnsiConsole.Prompt(
+            new SelectionPrompt<string>()
+            .Title("[red bold]Do you wish to see a detailed version? [/]")
+            .AddChoices(new[] {
+                           "Yes",
+                           "No"
+            })
+            );
+            if (showDetailedVersion == "Yes")
+            {
+                showGarageDetailed(garage);
+            }
+         
+
+
+        }
+        private static string GetSpotColor(ParkingSpot spot)
+        {
+            // Calculate fill level (0 = empty, 1 = full)
+            double fillRatio = 1 - ((double)spot.AvailableSize / 4); // assuming default spot size = 4
+
+            if (fillRatio == 0)
+                return "green";
+            else if (fillRatio < 1)
+                return "yellow";
+            else
+                return "red";
+        }
+        public static void showGarageDetailed(ParkingGarage garage)
         {
             var table = new Table();
             table.AddColumn(new TableColumn("Spot Number").Centered());

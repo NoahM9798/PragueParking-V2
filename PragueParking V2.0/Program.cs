@@ -29,6 +29,9 @@ while (!Menu.Exit)
         case "Show Garage":
             Menu.showGarage(Garage);
             break;
+        case "Show Price List":
+            Menu.showPriceList();
+            break;
         case "Reload Config":
             Garage = Menu.resetGarageInterface(Garage);
             Data.SaveData(Garage);

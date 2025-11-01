@@ -14,6 +14,7 @@ namespace PragueParking_V2._0
         //A list of all the parking spots
         public List<ParkingSpot> ParkingSpots { get; set; } = new List<ParkingSpot>();
 
+        //Constructor
         public ParkingGarage(bool resetWithNewValues = false)
         {
             Data.Config = ConfigManager.LoadConfig();
